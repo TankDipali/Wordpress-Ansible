@@ -1,0 +1,13 @@
+---
+- hosts: servers
+  become: true
+  vars_files:
+    - vars/default.yaml
+
+  roles:
+    - system
+    - php
+    - apache
+    - mysql
+    - firewall
+    - wordpress
